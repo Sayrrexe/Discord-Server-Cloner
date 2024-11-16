@@ -1,7 +1,7 @@
 import asyncio
 import platform
 import discord
-from os import system, getenv, path
+from os import close, system, getenv, path
 from dotenv import load_dotenv, set_key
 from serverclone import Clone
 from colorama import Fore, Style
@@ -105,3 +105,6 @@ try:
     client.run(TOKEN, bot=False)
 except discord.LoginFailure:
     print(f"{Fore.RED}Ошибка: Токен недействителен. Проверьте значение переменной 'TOKEN' в .env{Style.RESET_ALL}")
+
+
+close = input('press any key to close...')
